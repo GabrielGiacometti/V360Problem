@@ -3,11 +3,12 @@ class TasksController < ApplicationController
 
   # GET /tasks or /tasks.json
   def index
-    @tasks = Task.all
+    @tasks = Task.where(main_task_id: nil)
   end
 
   # GET /tasks/1 or /tasks/1.json
   def show
+    
   end
 
   # GET /tasks/new
