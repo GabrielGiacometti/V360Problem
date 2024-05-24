@@ -1,7 +1,7 @@
 
 <div id="<%= dom_id task %>" class ="show_task ">
   <div class = "done_title">
-    <%= check_box_tag "done" %>
+    <%= check_box_tag "done", "true", task.done %>
     
     <h2 class = "title">
      <%= task.title %>
