@@ -1,6 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @task %>
+<% @sub_tasks.each do |sub| %>
+      <%= render "showSub", sub: sub %>
+        <%= link_to "Show this task", sub %>
+    <% end %>
 
 <div>
   <%= link_to "Edit this task", edit_task_path(@task) %> |

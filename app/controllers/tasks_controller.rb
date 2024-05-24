@@ -1,10 +1,18 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: %i[ show edit update destroy ]
+  before_action :set_task, only: %i[ show edit update destroy  ]
 
   # GET /tasks or /tasks.json
   def index
     @tasks = Task.where(main_task_id: nil)
   end
+
+  def sub
+    @main_task = Task.find(params[:id])
+    @task = Task.new
+    @task.main_task = @main_task
+    
+  end
+
 
   # GET /tasks/1 or /tasks/1.json
   def show
@@ -13,7 +21,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/new
   def new
-    @task = Task.new
+    @task = Task.new(done: false)
   end
 
   # GET /tasks/1/edit
@@ -62,10 +70,11 @@ class TasksController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_task
       @task = Task.find(params[:id])
+      @sub_tasks = @task.sub_task
     end
 
     # Only allow a list of trusted parameters through.
     def task_params
-      params.require(:task).permit(:title, :description, :done)
+      params.require(:task).permit(:title, :description, :done, :main_task_id)
     end
 end

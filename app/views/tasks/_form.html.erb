@@ -23,10 +23,13 @@
 
   <div>
     <%= form.label :done, style: "display: block" %>
-    <%= form.check_box :done %>
+    <%= form.check_box :done, {}, 'true', 'false' %>
   </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
+  
+   <%= form.hidden_field :main_task_id %>
+  
+  
+     
+  <%= form.submit %>
+  
 <% end %>

@@ -11,5 +11,8 @@
     <strong>Description:</strong>
     <%= task.description %>
   </p>
-
+   <div>
+     <%= link_to "Adicionar Sub Task", new_sub_task_path(id: task.id)  %>
+    
+  </div>
 </div>
