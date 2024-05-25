@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   resources :tasks
 
   get 'sub(/:id)' => 'tasks#sub' , as: :new_sub_task
