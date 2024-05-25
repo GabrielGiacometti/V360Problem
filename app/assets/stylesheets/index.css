@@ -4,30 +4,43 @@
     padding: 0; 
     font-family: 'domine';
   }
+  body{
+    background-color: #fafcfb;
+  }
 .page_title{
     padding-top:30px;
     padding-bottom: 50px;
 }
-.list_main_task{
-    margin-left: 80px;
-    
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 100px;
 }
+
+.task-title-menu{
+    display: flex;
+}
+
+
+.title_done{
+    background-color: #d0e1e8;
+    display:flex;
+    font-weight: bold;
+    min-width: 300px;
+}
+
 
 .title{
     text-align: left;
     padding-left: 5px;
     padding-right: 75px;
-    background-color: orange;
-    display:  inline;
-    
-}
-.show_task{
-    margin-bottom: 50px;
+    font-weight: bold;
 }
 
-.done_title{
-    display: inline;
+
+.list_main_task{
+    margin-left: 80px;
+    
 }
-tasks{
-    display: inline;
-}
+
+
