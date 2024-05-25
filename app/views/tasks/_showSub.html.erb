@@ -1,6 +1,6 @@
 
   <div class = "done_title">
-    <%= check_box_tag "done", "true", sub.done %>
+    <%= check_box_tag "check_#{sub.id}", "true", sub.done, class: 'check' %>
     
     <h2 class = "title">
      <%= sub.title %>
