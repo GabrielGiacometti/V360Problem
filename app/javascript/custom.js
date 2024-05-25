@@ -1,5 +1,5 @@
 import { FetchRequest } from '@rails/request.js'
-alert("carregado")
+
 document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("change", async function(event) {
         const target = event.target;
