@@ -1,9 +1,11 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: %i[ show edit update destroy  ]
+  before_action :set_task, only: %i[ show edit update  ]
 
   # GET /tasks or /tasks.json
   def index
+    if !Task.count.zero?
     @tasks = Task.where(main_task_id: nil)
+    end
   end
 
   def sub
@@ -12,7 +14,10 @@ class TasksController < ApplicationController
     @task.main_task = @main_task
   end
 
-
+  def delAll
+      Task.destroy_all
+      redirect_to tasks_path, notice: 'All tasks were successfully deleted.'
+  end
   # GET /tasks/1 or /tasks/1.json
   def show
     
@@ -60,6 +65,8 @@ class TasksController < ApplicationController
 
   # DELETE /tasks/1 or /tasks/1.json
   def destroy
+    @task = Task.find(params[:id])
+    
     @task.destroy!
 
     respond_to do |format|

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  
+  get 'tasks/delAll', to: 'tasks#delAll', as: :destroy_all_tasks
   resources :tasks
-
+  
   get 'sub(/:id)' => 'tasks#sub' , as: :new_sub_task
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
