@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("change", async function(event) {
         const target = event.target;
         if (target.classList.contains("check")) {
-            const csrfToken = document.head.querySelector("meta[name=csrf-token]")?.content;  
             const isChecked = target.checked;
             const url = `/tasks/${target.id.replace("check_", "")}`;
 
