@@ -32,7 +32,10 @@
     height: 90px;
     background-color: white;
     border-radius: 15px ;
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     /*border: 1px solid indigo*/
 }
 
@@ -40,26 +43,26 @@
    display: flex;
    flex-direction: row;
    justify-content: center;
-   
+   align-items: center;
+   height: 100%;
+   width: 100%;
 } 
 .title, .check,.option {
-    position: relative;
-   
+    position: absolute;
 }
 .title {
-    top: 34px;
-    right: 135px;
-    cursor: pointer;
+    
+    /*right: 135px;
+    cursor: pointer;*/
 }
  .option {
-    top: 16px;
     
+    margin-left: 250px;
 }
- .check {
-    width: 30px;
-    margin-right: auto;
-    top: 22px;
-    left: 16px;
+.check {
+    height: 40px; /* ou qualquer altura desejada */
+    width: 40px; /* ou qualquer largura desejada */
+    margin-right: 250px;
 }
 
 .card .check:checked {
@@ -75,7 +78,7 @@
     transform: translateY(84%);
 }
 .show_task .description{
-    position: relative;
+    position: absolute;
     width :250px;
     height: 60px;
     opacity: 0.9;
