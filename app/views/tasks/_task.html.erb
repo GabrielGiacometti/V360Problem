@@ -1,14 +1,12 @@
 
 <div id="<%= dom_id task %>" class ="show_task ">
-
-    <div class = "task-title-menu">
-      <div class ='title_done'>
+      <div class ='card'>
         <%= check_box_tag "check_#{task.id}", "true", task.done,class: 'check' %>
-        <h2 class= title><%= task.title %></h2>
+        <label for= "check_<%= task.id %>" class= title><%= task.title %></label>
+      <div class ='option'>
+        <%= button_to new_sub_task_path(id: task.id), method: :get, class: "button" do %>&#x1F7C4;<% end %>
+        <%= button_to task_path(task), method: :get, class: "button" do %>&#9776;<% end %>
       </div>
-      <%= button_to new_sub_task_path(id: task.id), method: :get, class: "button" do %>&#x1F7C4;<% end %>
-      <%= button_to task_path(task), method: :get, class: "button" do %>&#9776;<% end %>
-     
     </div>
     <p class= 'description'><%= task.description %></p>
     

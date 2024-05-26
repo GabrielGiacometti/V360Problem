@@ -5,7 +5,7 @@
     font-family: 'domine';
   }
   body{
-    background-color: #fafcfb;
+    background-color: #e5e7eb;
   }
 .page_title{
     padding-top:30px;
@@ -19,32 +19,6 @@
     row-gap: 10px;
 }
 
-.task-title-menu{
-    display: flex;
-    overflow: hidden;
-    
-}
-
-
-.title_done{
-    background-color: #d0e1e8;
-    display:flex;
-    font-weight: bold;
-    width: 300px;
-    
-}
-
-
-.title_done .title{
-    padding-left: 5px;
-    padding-right: 75px;
-    font-weight: bold;
-    overflow: hidden;         
-    text-overflow: ellipsis;  
-    padding: 5px;              
-    
-}
-
 
 .list_main_task{
     margin-left: 80px;
@@ -56,21 +30,67 @@
     position: relative;
     width: 335px;
     height: 90px;
-    border: 1px solid indigo
+    background-color: white;
+    border-radius: 15px ;
     
+    /*border: 1px solid indigo*/
+}
+
+.card {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   
+} 
+.title, .check,.option {
+    position: relative;
+   
+}
+.title {
+    top: 34px;
+    right: 135px;
+    cursor: pointer;
+}
+ .option {
+    top: 16px;
     
 }
+ .check {
+    width: 30px;
+    margin-right: auto;
+    top: 22px;
+    left: 16px;
+}
+
+.card .check:checked {
+    accent-color: blue;
+    
+}
+.check:checked + .title  {
+    color: green;
+}
+
 .show_task:hover .description{
     visibility: visible;
+    transform: translateY(84%);
 }
 .show_task .description{
-    width :300px;
-    overflow-y: scroll;
+    position: relative;
+    width :250px;
+    height: 60px;
+    opacity: 0.9;
+    overflow-y: auto;
     visibility: hidden;
-    position: absolute;
-    border: 1px solid burlywood;
+    border-radius: 10px;
     box-sizing: border-box; 
     word-wrap: break-word;
-    inset: 40px 0 0 0;
- 
+    top: 10px;
+    left: 46px;
+    background-color: #d4d4d4;
+    transition:.5s ease-out ;
+    padding: 5px;
+    
+}
+.show_task .description:empty {
+    display: none;
 }
