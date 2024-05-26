@@ -16,7 +16,7 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-auto-rows: 100px;
-    row-gap: 10px;
+    row-gap: 90px;
 }
 
 
@@ -28,8 +28,8 @@
 
 .show_task {
     position: relative;
-    width: 335px;
-    height: 90px;
+    width: 400px;
+    height: 120px;
     background-color: white;
     border-radius: 15px ;
     display: flex;
@@ -51,20 +51,31 @@
     position: absolute;
 }
 .title {
+    max-width :259px;
+    font-size: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    left: 78px; /* Alinha o texto à esquerda */
     
-    /*right: 135px;
-    cursor: pointer;*/
 }
- .option {
-    
-    margin-left: 250px;
-}
+ 
 .check {
     height: 40px; /* ou qualquer altura desejada */
     width: 40px; /* ou qualquer largura desejada */
-    margin-right: 250px;
+    margin-right: 325px;
 }
 
+.button{
+    margin-left: 300px;
+    margin-top: 65px;
+}
+.number-sub{
+    position: absolute;
+    left: 80px;
+    top: 80px;
+    color: #737373;
+}
 .card .check:checked {
     accent-color: blue;
     
@@ -72,10 +83,18 @@
 .check:checked + .title  {
     color: green;
 }
+.button-description{
+    position:absolute;
+    border: none; 
+    background: none; 
+    font-size: 30px;
+    cursor: pointer;
+    right: 45px;
 
-.show_task:hover .description{
+}
+.button-description:hover + .description{
     visibility: visible;
-    transform: translateY(50px);
+    transform: translateY(80px);
 }
 .show_task .description{
     position: absolute;
