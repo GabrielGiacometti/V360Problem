@@ -1,8 +1,8 @@
-
-  <div class = "done_title">
+<div class = 'sub-container'>
     <%= check_box_tag "check_#{sub.id}", "true", sub.done, class: 'check' %>
     
-    <h2 class = "title">
-     <%= sub.title %>
-    </h2>
+    <h2 class = "sub-title"><%= sub.title %></h2>
+     <%= button_to "x", sub, class: 'sub-destroy',method: :delete,data: { turbo_method: 'delete', turbo_confirm: "do you really want to delete all the tasks?" } %>
+     <%= button_to task_path(sub), method: :get, class: "sub-show",id: "botao_#{sub.id}" do %>🕮<% end %>
+</div>
 
