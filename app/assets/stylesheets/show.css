@@ -86,17 +86,18 @@
     font-size: 25px;
     cursor: pointer;
     opacity: 0.7;
+   
 }
 .button-description:hover + .description{
     visibility: visible;
-    transform: translateX(740px) rotate(360deg);
+    transform: translateX(620px) rotate(360deg);
     
 }
 
 
 .show_task .description {
     position: absolute;
-    max-width: 250px;
+    max-width: 310px;
     width: auto;
     height: auto;
     opacity: 0.9;
@@ -108,7 +109,8 @@
     z-index: 9999;
     background-color: #d4d4d4;
     padding: 5px;
-    left: 65px;
+    top: 100px;
+    left: 310px;
 }
 .show_task .description:empty {
     display: none;
