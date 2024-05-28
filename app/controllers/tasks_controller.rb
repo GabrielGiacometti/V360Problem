@@ -30,7 +30,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/1/edit
   def edit
-    response.headers['Access-Control-Allow-Origin'] = 'http://127.0.0.1:3000/tasks'
+   
   end
 
   # POST /tasks or /tasks.json
@@ -40,6 +40,7 @@ class TasksController < ApplicationController
     respond_to do |format|
       if @task.save
         format.html { redirect_to task_url(@task), notice: "Task was successfully created." }
+        format.turbo_stream
         format.json { render :show, status: :created, location: @task }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -55,6 +56,7 @@ class TasksController < ApplicationController
       if @task.update(task_params) 
         format.html { redirect_to task_url(@task), notice: "Task was successfully updated." }
         format.json { render :show, status: :ok, location: @task }
+        format.turbo_stream
       else
        
         format.html { render :edit, status: :unprocessable_entity }
@@ -71,7 +73,7 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to tasks_url, notice: "Task was successfully destroyed." }
-      format.json { head :no_content }
+      format.json { head :no_content, content_type: 'application/json'  }
     end
   end
 

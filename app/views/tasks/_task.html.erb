@@ -6,6 +6,7 @@
         <div class='number-sub'><label for="botao_<%= task.id%>">sub tasks <%=task.sub_task.size%></label></div>
         <!-- <%= button_to new_sub_task_path(id: task.id), method: :get, class: "button" do %>&#x1F7C4;<% end %>-->
         <%= button_to task_path(task), method: :get, class: "button-sub",id: "botao_#{task.id}" do %>🕮<% end %>
+
     </div>
   
     <button class="button-description">&#128065</button>

@@ -1,0 +1,2 @@
+<%=turbo_stream.prepend "sub_tasks", partial:"tasks/showSub", locals:{sub: @task}%>
+<%=turbo_stream.update  Task.new,"" %>

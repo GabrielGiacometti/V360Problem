@@ -1,4 +1,6 @@
 <%= stylesheet_link_tag "show", "data-turbo-track": "reload" %>
+<%= stylesheet_link_tag "sub-form-turbo", "data-turbo-track": "reload" %>
+
 <p style="color: green"><%= notice %></p>
 
 <div class ='main-task'>
@@ -6,17 +8,26 @@
   <%= link_to "Edit this task", edit_task_path(@task) %> |
   <%= link_to "Back to tasks", tasks_path %>
   <%= button_to "Destroy this task", @task, method: :delete %>
-  
 </div>
-
 <div class ='sub-task'>
   <div class= 'add_sub'>
-    <%= button_to new_sub_task_path(id: @task.id),id: @task.id , method: :get, class: "button" do %>&#x1F7C4;<% end %>
+    <%= button_to new_sub_task_path(id: @task.id),id: @task.id , method: :get, class: "button", data:{turbo_frame:dom_id(Task.new)} do %>&#x1F7C4;<% end %>
     <label for="<%= @task.id%>">Add more</label>
   </div>
+
+  <div class ="sub-form">
+  <%= turbo_frame_tag Task.new%>
+  </div>
+  
+  <%=turbo_frame_tag "sub_tasks" do %>
+  <div class="sub-task">
   <% @sub_tasks.each do |sub| %>
         <%= render "showSub", sub: sub %>
   <% end %>
+  </div>
+  <%end%>
+
+ 
 </div>
 
 <div>

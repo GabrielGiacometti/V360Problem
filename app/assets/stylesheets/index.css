@@ -64,6 +64,7 @@
     width: 40px; /* ou qualquer largura desejada */
     margin-right: 325px;
     cursor: pointer;
+    box-shadow: #5E5DF0 0 10px 11px -10px;
 }
 
 .button-sub{
@@ -74,6 +75,7 @@
     opacity: 0.85;
     background: none; 
     cursor: pointer;
+    
 }
 .number-sub label{
     position: absolute;
