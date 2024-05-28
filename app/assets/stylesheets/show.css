@@ -63,6 +63,7 @@
     margin-left: 20px;
     font-size: 20px;
     box-shadow: #5E5DF0 0 10px 20px -10px;
+    margin-bottom: 20px;
 }
 .button {
     position: relative;
@@ -80,7 +81,7 @@
     left: 41px;
     cursor: pointer;
     bottom: -2px;
-    
+   
 }
 .button-description{
     position: relative;
@@ -123,9 +124,8 @@
 
 .sub-task{
     display: flex;
-    gap: 33px;
     flex-direction: column;
-    row-gap: 20px;
+    
 }
 
 .sub-container{
@@ -140,6 +140,7 @@
     border-radius: 21px;
     background-color: #ecfeff;
     box-shadow: #5E5DF0 0 10px 20px -10px;
+    margin-bottom: 20px
 }
 .sub-container .check{
     position: relative;
