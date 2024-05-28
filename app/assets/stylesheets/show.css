@@ -26,7 +26,7 @@
   }
  .title {
     position: relative;
-    max-width :259px;
+    max-width :700px;
     font-size: 65px;
     left: 35px; /* Alinha o texto à esquerda */
     cursor: pointer;
@@ -34,6 +34,13 @@
     overflow: hidden;
     text-overflow: ellipsis;
     
+}
+.options{
+    position: absolute;
+    display: flex;
+    
+    margin-top: 69px;
+    margin-left: 300px;
 }
 .check {
     height: 40px; /* ou qualquer altura desejada */
@@ -86,7 +93,7 @@
 .button-description{
     position: relative;
     margin-left: 185px;
-    bottom:18px;
+    bottom:21px;
     border: none; 
     background: none; 
     font-size: 25px;
