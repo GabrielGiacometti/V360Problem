@@ -156,13 +156,15 @@
 }
 .sub-title{
     position: relative;
-    left: 25px;
+    left: 22px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     cursor: pointer;
     width: 350px;
     color: black;
+    font-size: 30px;
+    bottom: -3px;
 }
 
 
