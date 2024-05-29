@@ -6,12 +6,12 @@
   <div class= "page_title">
     <h1 >TO-DO-LIST</h1>
     <%= link_to "New task", new_task_path,data:{turbo_frame: dom_id(Task.new)} %>
-  <%= link_to 'Delete All Tasks', destroy_all_tasks_path, data: { turbo_method: 'delete', turbo_confirm: "do you really want to delete all the tasks?" }  %>
-  <div class ="form">
-    <%= turbo_frame_tag Task.new%>
+    <%= link_to 'Delete All Tasks', destroy_all_tasks_path, data: { turbo_method: 'delete', turbo_confirm: "do you really want to delete all the tasks?" }  %>
+    <div class ="form">
+      <%= turbo_frame_tag Task.new%>
+    </div>
   </div>
-  </div>
-  <%= turbo_frame_tag "task" do%><!-- verificar -->
+  <%= turbo_frame_tag "task" do%>
   <div id="tasks" class="container">
     <% if !Task.count.zero? %>
         <%= render @tasks%>

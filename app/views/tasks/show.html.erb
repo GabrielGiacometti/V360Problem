@@ -11,6 +11,7 @@
     <%= button_to "Destroy this task", @task, method: :delete %>
   </div>
 </div>
+
 <div class ='sub-task'>
   <div class= 'add_sub'>
     <%= button_to new_sub_task_path(id: @task.id),id: @task.id , method: :get, class: "button", data:{turbo_frame:dom_id(Task.new)} do %>&#x1F7C4;<% end %>

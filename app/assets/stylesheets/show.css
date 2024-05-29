@@ -50,7 +50,7 @@
     box-shadow: #5E5DF0 0 10px 20px -10px;
     
 }
-.number-sub{
+#number-sub{
     position:absolute;
     left: 170px;
     margin-top: 75px;
