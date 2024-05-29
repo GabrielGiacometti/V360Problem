@@ -1,8 +1,19 @@
+
 .sub-form{
-    position: absolute;
-     margin-left: 500px;
-    bottom: 210px;
-    
+  position: relative;
+  align-items: flex-start; 
+}
+.formS{
+  position: absolute;
+  left: 1100px;
+  bottom:-180px
+}
+.sub-form .error{
+  color: red;
+  flex-basis: 100%;
+  position: absolute;
+  left: 1095px;
+  bottom:45px
 }
 
 #task_title{
@@ -10,31 +21,32 @@
 }
 #task_description{
     padding: 10px 20px;
-  }
-  label {
-    font-weight: bold; /* torna o texto em negrito */
-    color: #333; /* define a cor do texto */
-    margin-bottom: 5px; /* adiciona um espaçamento inferior */
-  }
+}
 
-  input[type="submit"] {
-    background: #5E5DF0;
-    border-radius: 999px;
-    box-shadow: #5E5DF0 0 10px 20px -10px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    opacity: 1;
-    outline: 0 solid transparent;
-    padding: 8px 18px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: fit-content;
-    word-break: break-word;
-    border: 0;
-  }
+label {
+  font-weight: bold; 
+  color: #333;
+  margin-bottom: 5px; 
+}
+
+input[type="submit"] {
+  background: #5E5DF0;
+  border-radius: 999px;
+  box-shadow: #5E5DF0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}

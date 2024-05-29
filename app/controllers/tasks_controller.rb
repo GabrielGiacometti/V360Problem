@@ -4,7 +4,7 @@ class TasksController < ApplicationController
   # GET /tasks or /tasks.json
   def index
     if !Task.count.zero?
-    @tasks = Task.where(main_task_id: nil)
+    @tasks = Task.where(main_task_id: nil).ordered
     end
   end
 
@@ -20,7 +20,7 @@ class TasksController < ApplicationController
   end
   # GET /tasks/1 or /tasks/1.json
   def show
-    @sub_tasks = @task.sub_task
+    @sub_tasks = @task.sub_task.ordered
   end
 
   # GET /tasks/new
