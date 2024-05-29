@@ -55,7 +55,7 @@ class TasksController < ApplicationController
       if @task.update(task_params) 
         format.html { redirect_to task_url(@task), notice: "Task was successfully updated." }
         format.json { render :show, status: :ok, location: @task }
-        format.turbo_stream
+        
       else
        
         format.html { render :edit, status: :unprocessable_entity }
@@ -73,6 +73,8 @@ class TasksController < ApplicationController
     respond_to do |format|
       format.html { redirect_to tasks_url, notice: "Task was successfully destroyed." }
       format.json { head :no_content, content_type: 'application/json'  }
+      
+      
     end
   end
 
