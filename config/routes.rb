@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'tasks#index'
   resources :tasks
+  
   delete 'delAll', to: 'tasks#delAll', as: :destroy_all_tasks
   
   get 'sub(/:id)' => 'tasks#sub' , as: :new_sub_task
